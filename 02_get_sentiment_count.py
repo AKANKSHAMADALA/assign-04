@@ -16,14 +16,26 @@ sentiment_type will contain either "negative" or "positive".
 
 import unittest
 
-def get_sentiment_count(filename, sentiment_type): 
+def get_sentiment_count(filename, sentiment_type):
   sentiment_words = {
-    "negative":["aggressive","hostile","bad","against","rediculous","targeted","offended","offend","force","forceful","forcefully","annoyed","foolish","illogical","cheos"], 
-    "positive": ["adore","good","excellent","beloved","benevolent","developed","pride","proud","celebratory","optimistic","cheery"]
+    "negative":["aggressive","hostile","bad""good","excellent","beloved",,"against","rediculous","targeted","offended","offend","force","forceful","forcefully","annoyed","foolish","illogical","cheos"],
+    "positive": ["adore","benevolent","developed","pride","proud","celebratory","optimistic","cheery"]
   }
 
   # Delete the bellow line and write your implementation
-  pass
+  f=open(filename,'r')
+  c=0
+  x=f.read()
+  y=x.split()
+  for i,j in sentiment_words.items():
+    if(i==sentiment_type):
+      z=j
+      for a in y:
+        for b in z:
+          if(a==b):
+            c+=1
+  f.close()
+  return c
 
   
 # don't touch the code bellow
