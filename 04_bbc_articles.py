@@ -12,10 +12,17 @@ Now you can imagine that your dictionary should contain each word as key and val
 '''
 
 import unittest
-def bbc_articles(filenames, search_key): 
-  
+def bbc_articles(filenames, search_key):
   # Delete the bellow line and write your implementation
-  pass
+  l=[]
+  for i in filenames:
+    f=open(i,'r')
+    x=f.read()
+    y=x.split()
+    if search_key in y:
+      l.append(i)
+    f.close()
+  return l
         
 # don't touch the code bellow
 
