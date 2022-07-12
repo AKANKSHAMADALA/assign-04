@@ -31,11 +31,27 @@ A dictionary with positive and negative words are given in the program.
 
 import unittest
 
-def sentiment_analysis(filename): 
-  sentiment_words = {"positive":["good","excellent","happy","positive","respect","respectful","respected","nice","constructive"], "negative": ["bad","worse","worsening","worsened","disrespect","ugly","down","vulnerability","vulnerable","disastrous","destructive"]}
+def get_sentiment_count(filename, sentiment_type):
+  sentiment_words = {
+    "negative":["aggressive","hostile","bad""good","excellent","beloved",,"against","rediculous","targeted","offended","offend","force","forceful","forcefully","annoyed","foolish","illogical","cheos"],
+    "positive": ["adore","benevolent","developed","pride","proud","celebratory","optimistic","cheery"]
+  }
 
   # Delete the bellow line and write your implementation
-  pass
+  f=open(filename,'r')
+  c=0
+  x=f.read()
+  y=x.split()
+  for i,j in sentiment_words.items():
+    if(i==sentiment_type):
+      z=j
+      for a in y:
+        for b in z:
+          if(a==b):
+            c+=1
+  f.close()
+  return c
+
 
 # don't touch the code bellow
 
