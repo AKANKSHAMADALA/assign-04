@@ -1,2 +1,26 @@
 # Write down your observations and what did you learn new - in this file
+Question 1
+In this question we run two for loops on d.items() and check if the values are equal and if
+they are equal we append the corresponding keys into a new list and then append the list into
+a new dictionary and then return it.
+Question 2
+We first open the file in read mode with the help of open method and then we split the read
+function at whitespaces which will give us a list and then run a for loop on
+the sentiment dictionary.items() and check if the key is equal to the given sentiment type and if
+yes then we append the values in a new list and then then we run nested for loops on the split
+list and the new list and we check if both the elements are equal if yes then we increment the
+count variable else pass.
+Question 3
+We open the file in read mode and then we split the file using split function and then we
+run a for loop on the sentiment positive list and check if the element in the list is present
+in the file as well and if yes then we increment the count variable and we do the same
+procedure for the negetive sentiment list and finally we check for the conditions given on
+positive and negetive comment and if any one of the condition is satisfied then we print
+the corresponding type of comment that is negetive or positive comment and if neither of the
+two is satisfied we print neutral comment
+Question 4
+We run a for loop on the list of files given to us and open each one of them in read mode using
+open method and then we write .read() to read the file and then split the file at whitespaces
+to obtain a list and now we check for the presence of the key in the newly obtained list and if
+the condition is true we append the corresponding file name into a new list and then return it.
 
